@@ -2,7 +2,7 @@
   <div>
     <h2>{{title}}</h2>
     <select v-model='choice'>
-      <option value='default'>Select episode</option>
+      <option value='default'>{{msg}}</option>
       <option
         v-for='(episode,e) in $store.state.episodes'
         :key='`${e}-${episode.id}`'
@@ -37,7 +37,8 @@ export default {
     }
   },
   props: {
-    title: String
+    title: String,
+    msg: String
   },
   name: 'EpisodeSearch'
 }

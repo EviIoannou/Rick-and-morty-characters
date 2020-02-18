@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LocationSearch @get-characters ="loadCharacters" title="Locations"/>
+    <LocationSearch @get-characters ="loadCharacters" title="Locations" msg="Select location"/>
     <CharacterInfo></CharacterInfo>
   </div>
 </template>

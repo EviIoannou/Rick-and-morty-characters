@@ -1,7 +1,7 @@
 <template>
   <div>
-    <EpisodeSearch @get-characters='loadCharacters' title="Episodes"></EpisodeSearch>
-    <CharacterInfo></CharacterInfo>
+  <EpisodeSearch @get-characters='loadCharacters' title="Episodes" msg="Select episode"/>
+  <CharacterInfo></CharacterInfo>
   </div>
 </template>
 <script>

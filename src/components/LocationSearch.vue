@@ -2,7 +2,7 @@
   <div>
     <h2>{{title}}</h2>
     <select v-model='choice'>
-      <option value='default'>Select location</option>
+      <option value='default'>{{msg}}</option>
       <option
         v-for='(location,l) in $store.state.locations'
         :key='`${l}-${location.id}`'
@@ -36,7 +36,8 @@ export default {
     }
   },
   props: {
-    title: String
+    title: String,
+    msg: String
   },
   name: 'LocationSearch'
 }
