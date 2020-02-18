@@ -1,6 +1,6 @@
 <template >
   <div>
-    <h2>Episode</h2>
+    <h2>{{title}}</h2>
     <select v-model='choice'>
       <option value='default'>Select episode</option>
       <option
@@ -11,7 +11,6 @@
     </select>
   </div>
 </template>
-
 <script>
 
 export default {
@@ -36,6 +35,9 @@ export default {
       console.log(this.choice)
       this.$emit('get-characters', this.choice)
     }
+  },
+  props: {
+    title: String
   },
   name: 'EpisodeSearch'
 }

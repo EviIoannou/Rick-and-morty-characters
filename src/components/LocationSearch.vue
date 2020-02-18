@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Location</h2>
+    <h2>{{title}}</h2>
     <select v-model='choice'>
       <option value='default'>Select location</option>
       <option
@@ -34,6 +34,9 @@ export default {
       console.log(this.choice)
       this.$emit('get-characters', this.choice)
     }
+  },
+  props: {
+    title: String
   },
   name: 'LocationSearch'
 }

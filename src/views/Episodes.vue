@@ -1,6 +1,6 @@
 <template>
   <div>
-    <EpisodeSearch @get-characters='loadCharacters'></EpisodeSearch>
+    <EpisodeSearch @get-characters='loadCharacters' title="Episodes"></EpisodeSearch>
     <CharacterInfo></CharacterInfo>
   </div>
 </template>
