@@ -26,7 +26,7 @@ export default {
         })
     }
   },
-  name: 'episodes',
+  name: 'search',
   components: {
     EpisodeSearch,
     CharacterInfo
