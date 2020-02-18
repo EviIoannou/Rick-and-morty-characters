@@ -8,11 +8,14 @@ export default new Vuex.Store({
     episodes: null,
     locations: null,
     myCharacters: [],
+    id: null,
+    imageSource: null,
+    myInfo: null
   },
 
   mutations: {
-    setCharacters(state, value){
-      state.myCharacters= value;
+    setCharacters (state, value) {
+      state.myCharacters = value
     }
   }
 })

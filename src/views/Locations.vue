@@ -1,39 +1,35 @@
 <template>
   <div>
     <LocationSearch @get-characters ="loadCharacters"/>
+    <CharacterInfo></CharacterInfo>
   </div>
 </template>
-
-// <script>
+<script>
 // // @ is an alias to /src
 import LocationSearch from '@/components/LocationSearch.vue'
+import CharacterInfo from '@/components/CharacterInfo.vue'
 
 export default {
-   methods: {
-    
-   loadCharacters(choice) {
-      this.$store.commit("setCharacters", []);
-      console.log(this.$store.state.myCharacters);
+  methods: {
+    loadCharacters (choice) {
+      this.$store.commit('setCharacters', [])
       fetch(`https://rickandmortyapi.com/api/location/${choice}`)
         .then(response => response.json())
         .then(result => {
-          // console.log(result)
-          // console.log(result.characters);
           result.residents.forEach(resident => {
             fetch(`${resident}`)
               .then(response => response.json())
               .then(result => {
-                // console.log(result);
-                this.$store.state.myCharacters.push(result);
+                this.$store.state.myCharacters.push(result)
               })
           })
         })
-        .then(console.log(this.$store.state.myCharacters))
     }
   },
-  name: "locations",
+  name: 'locations',
   components: {
-    LocationSearch
+    LocationSearch,
+    CharacterInfo
   }
 }
 
