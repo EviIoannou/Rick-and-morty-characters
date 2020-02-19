@@ -1,48 +1,87 @@
 <template>
-  <div class="intro">
-    <h1>{{ msg }}</h1>
+  <main>
+    <h1>{{ title }}</h1>
+    <!-- <img src="../assets/logo.png" alt=""> -->
+    <h2>{{ subtitle }}</h2>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+      Welcome to the ultimate Rick and Morty Character-verse! <br>
+      Here you can search for info about all the characters from your favourite TV series, Rick and Morty.
     </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+    <div class='intro'>
+      <div id='story'>
+        <h3>The story</h3>
+        <p>Rick and Morty is an American adult animated science fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's late-night programming block Adult Swim. <br>
+          The series follows the misadventures of cynical mad scientist Rick Sanchez and his good-hearted but fretful grandson Morty Smith, who split their time between domestic life and interdimensional adventures. <br>
+          Roiland voices the eponymous characters, with Chris Parnell, Spencer Grammer and Sarah Chalke voicing the rest of the family. <br>
+          The series originated from an animated short parody film of Back to the Future, created by Roiland for Channel 101, a short film festival co-founded by Harmon.  <br>
+          The series has been acclaimed by critics for its originality, creativity and humor. <br>
+          The series has been picked up for an additional seventy episodes over an unspecified number of seasons, beginning with season 4.
+          The fourth season premiered on November 10, 2019 and will consist of ten episodes.</p>
+          <p class="source">Source: Wikipedia</p>
+        <p class="link">You can watch all episodes as well as clips <a href="https://www.adultswim.com/videos/rick-and-morty">here</a>.</p>
+      </div>
+      <div id='searchEpisode'>
+        <h3>The character-verse</h3>
+        <p>
+          In this Character-verse, you can search for characters that appeared in different episodes. <br>
+          Just choose the episode and you will see which characters played.
+          Episodes available are up to season 2, episode 9.
+        </p>
+        <router-link to="/search/episode">Search in episodes...</router-link>
+      </div>
+      <div id='searchLocation'>
+        <p>
+          You can also look into which characters were last seen in which location.  <br>
+          Just choose the location and you will see which characters were last seen there.
+          There are 20 locations to choose from.
+        </p>
+        <router-link to="/search/location">Search in locations...</router-link>
+      </div>
+    </div>
+    <footer>Sources</footer>
+  </main>
 </template>
 
 <script>
 export default {
   name: 'Introduction',
   props: {
-    msg: String
+    title: String,
+    subtitle: String
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+main{
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgba(250, 228, 139, 0.952) */
+}
+.intro{
+  border-radius: 8px;
+  padding: 1em;
+  text-align: start;
+  width: 50%;
+  align-self: center;
+  background-color: #24325FFF;
+  color:#B7E4F9FF
+}
+
+.intro #searchEpisode, #searchLocation {
+margin-top: 1em;
+margin-bottom: 1em
+}
+
+.intro .link{
+  font-size: smaller
+}
+
+.intro .source{
+  font-weight: lighter;
+  font-size: small;
+  font-style: italic;
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -55,6 +94,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: rgba(251, 253, 124, 0.664);
 }
 </style>
