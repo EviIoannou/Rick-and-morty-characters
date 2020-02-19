@@ -11,7 +11,9 @@
 
 <style>
 body{
-  background-color: rgba(170, 201, 216, 0.829)
+  background-color: rgba(170, 201, 216, 0.829);
+  margin: 0;
+  width: 100%
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -19,11 +21,14 @@ body{
   -moz-osx-font-smoothing: grayscale; */
   text-align: center;
   color: #2c3e50;
+  width: 100%
 }
 
 #nav {
   padding: 30px;
-  text-align: end;
+  margin: 0;
+  width: 100%;
+  text-align: start;
   background-color: #24325FFF;
 }
 
@@ -35,6 +40,10 @@ body{
 
 #nav a.router-link-exact-active {
   color: rgb(238, 238, 214);
+}
+
+h2 {
+  color: #24325FFF
 }
 
 </style>

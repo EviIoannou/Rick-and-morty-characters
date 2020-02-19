@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <Introduction title="Rick and Morty" subtitle="a character-verse"/>
+    <Introduction title="Rick and Morty" subtitle="A character-verse"/>
   </div>
 </template>
 
