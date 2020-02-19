@@ -3,13 +3,13 @@
     <EpisodeSearch
       v-if="$route.params.filter==='episode'"
       @get-characters='loadCharacters'
-      title='Episodes'
+      title='Episode'
       msg='Select episode'
     />
     <LocationSearch
       v-if="$route.params.filter==='location'"
       @get-characters='loadCharacters'
-      title='Locations'
+      title='Location'
       msg='Select location'
     />
     <CharacterInfo></CharacterInfo>
@@ -51,7 +51,7 @@ export default {
         })
     }
   },
-  name: 'search',
+  name: 'Search',
   components: {
     EpisodeSearch,
     LocationSearch,

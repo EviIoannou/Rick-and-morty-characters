@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{title}}</h2>
-    <select v-model='choice'>
+       <select v-model='choice'>
       <option value='default'>{{msg}}</option>
       <option
         v-for='(location,l) in $store.state.locations'
@@ -9,7 +9,7 @@
         :value='location.id'
       >{{location.name}}</option>
     </select>
-  </div>
+    </div>
 </template>
 <script>
 
@@ -44,4 +44,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>
