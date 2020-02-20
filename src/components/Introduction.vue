@@ -55,6 +55,7 @@ export default {
 main{
   display: flex;
   flex-direction: column;
+  width: 100%
   /* background-color: rgba(250, 228, 139, 0.952) */
 }
 
@@ -114,11 +115,20 @@ color: rgba(170, 201, 216)
 }
 
 footer {
-  padding: 1em;
+  padding: 1.2em;
   width: 100%;
   margin: 0;
   background-color: #24325FFF;
   color: rgba(170, 201, 216);
   font-size: small
+}
+
+@media screen and (max-width: 425px){
+  .intro {
+grid-template-columns: auto
+  }
+  .intro div {
+    width: 70%
+  }
 }
 </style>

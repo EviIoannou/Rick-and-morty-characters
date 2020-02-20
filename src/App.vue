@@ -17,15 +17,15 @@ body{
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* margin: 0; */
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   text-align: center;
   color: #2c3e50;
-  width: 100%
 }
 
 #nav {
-  padding: 30px;
+  padding: 1em;
   margin: 0;
   width: 100%;
   text-align: start;
@@ -46,4 +46,9 @@ h2 {
   color: #24325FFF
 }
 
+@media screen and (max-width: 425px){
+  #app {
+   font-size: smaller
+  }
+}
 </style>

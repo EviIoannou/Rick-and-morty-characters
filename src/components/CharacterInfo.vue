@@ -7,8 +7,8 @@
         :key="`${c}-${myCharacter.id}`"
         :value="myCharacter.id"
       >
-       <input type="button" value="Info" class='show' :id="myCharacter.id" @click="getId" />
         {{myCharacter.name}}
+        <input type="button" value="Info" class='show' :id="myCharacter.id" @click="getId" />
       </p>
     </section>
 
@@ -62,15 +62,22 @@ export default {
   grid-row-gap: 1em;
   grid-column-gap: 0.5em;
   justify-content: center;
-  justify-items: start;
+  /* justify-items: start; */
+  text-align: center
 }
 
 #allCharacters p {
   margin-left: 1em;
   margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
 }
 
 .show {
+align-self: center;
+display: block;
+width: 70px;
 background-color: #008CBA;
 padding: 0.3em 0.8em;
 border-radius: 8px;
@@ -149,4 +156,11 @@ font-weight: bold;
 padding-right: 1em
 }
 
+@media screen and (max-width: 425px){
+  .popup{
+    width: 50%
+  }
+  .popup img{
+  width: 80%;
+}}
 </style>

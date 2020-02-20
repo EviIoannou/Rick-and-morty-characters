@@ -30,9 +30,7 @@ export default {
   },
   watch: {
     choice (val) {
-      this.choice = val
-      console.log(this.choice)
-      this.$emit('get-characters', this.choice)
+      this.$emit('get-characters', val)
     }
   },
   props: {
