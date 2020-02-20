@@ -21,21 +21,21 @@ body{
   -moz-osx-font-smoothing: grayscale; */
   text-align: center;
   color: #2c3e50;
-  width: 100%
 }
 
 #nav {
-  padding: 30px;
-  margin: 0;
-  width: 100%;
-  text-align: start;
   background-color: #24325FFF;
+  margin: 0;
+  padding: 1em;
+  text-align: start;
+  width: 100%;
 }
 
 #nav a {
   font-weight: bold;
   color: rgb(70, 158, 190);
-  text-decoration: none
+  text-decoration: none;
+  font-size: larger
 }
 
 #nav a.router-link-exact-active {
@@ -46,4 +46,9 @@ h2 {
   color: #24325FFF
 }
 
+@media screen and (max-width: 425px){
+  #nav {
+   font-size: small
+  }
+}
 </style>

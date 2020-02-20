@@ -30,9 +30,7 @@ export default {
   },
   watch: {
     choice (val) {
-      this.choice = val
-      console.log(this.choice)
-      this.$emit('get-characters', this.choice)
+      this.$emit('get-characters', val)
     }
   },
   props: {
@@ -44,5 +42,15 @@ export default {
 </script>
 
 <style scoped>
-
+select{
+  font-size: large
+}
+@media screen and (max-width: 425px){
+  h2 {
+    font-size: medium
+  }
+  select {
+  font-size: small
+  }
+}
 </style>
