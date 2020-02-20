@@ -61,7 +61,8 @@ main{
 
 main #welcome {
   font-weight: bold;
-  color:#24325FFF
+  color:#24325FFF;
+  font-size: 1.3em
 }
 img{
   width: 30%;
@@ -77,7 +78,8 @@ img{
   width: 100%;
   align-self: center;
   background-color: rgb(228, 239, 245);
-  color:#24325FFF
+  color:#24325FFF;
+  font-size: 1.1em
 }
 
 .intro div {
@@ -121,7 +123,7 @@ footer {
   margin: 0;
   background-color: #24325FFF;
   color: rgba(170, 201, 216);
-  font-size: smaller
+  font-size: medium
 }
 
 @media screen and (max-width: 768px){
