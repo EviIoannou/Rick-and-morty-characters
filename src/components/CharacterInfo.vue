@@ -156,7 +156,7 @@ font-weight: bold;
 padding-right: 1em
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
   .popup{
     width: 50%
   }
