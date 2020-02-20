@@ -17,7 +17,6 @@ body{
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  /* margin: 0; */
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   text-align: center;
@@ -25,11 +24,11 @@ body{
 }
 
 #nav {
-  padding: 1em;
-  margin: 0;
-  width: 100%;
-  text-align: start;
   background-color: #24325FFF;
+  margin: 0;
+  padding: 1em;
+  text-align: start;
+  width: 100%;
 }
 
 #nav a {

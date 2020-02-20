@@ -52,7 +52,7 @@ select {
     font-size: medium
   }
   select {
-font-size: small
+  font-size: small
   }
 }
 </style>

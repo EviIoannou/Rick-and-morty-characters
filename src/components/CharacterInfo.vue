@@ -83,23 +83,9 @@ h2{
   margin-top: 1.5em;
   margin-bottom: 0.5em
 }
-.show {
-align-self: center;
-display: block;
-width: 70px;
-background-color: #008CBA;
-padding: 0.3em 0.8em;
-margin: 1em;
-font-size: 0.7em;
-border-radius: 8px;
-color: bisque;
-cursor: pointer;
-transition-duration: 0.4s;
-}
 
-.show:hover {
-  background-color: rgb(0, 52, 70); /* Green */
-  color: white;
+.info {
+  text-align: start
 }
 
 .overlay {
@@ -154,20 +140,35 @@ transition-duration: 0.4s;
   overflow: auto
 }
 
-table {
-margin-top: 1em;
-color: #333;
-font-family: Tahoma, Arial, sans-serif;
+.show {
+align-self: center;
+display: block;
+width: 70px;
+background-color: #008CBA;
+padding: 0.3em 0.8em;
+margin: 1em;
+font-size: 0.7em;
+border-radius: 8px;
+color: bisque;
+cursor: pointer;
+transition-duration: 0.4s;
 }
 
-.info {
-  text-align: start
+.show:hover {
+  background-color: rgb(0, 52, 70); /* Green */
+  color: white;
 }
+
 .subtitle {
 font-weight: bold;
 padding-right: 1em
 }
 
+table {
+margin-top: 1em;
+color: #333;
+font-family: Tahoma, Arial, sans-serif;
+}
 @media screen and (max-width: 768px){
   .popup{
     width: 50%
