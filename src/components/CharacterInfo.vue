@@ -55,13 +55,18 @@ export default {
 
 #allCharacters {
   margin: 1em;
+  margin-top:0;
   padding: 1em;
+  padding-left: 0.5em;
+  padding-top:0;
+  font-size: 1.5em;
   display: grid;
   grid-template-columns:  auto auto auto;
   grid-template-rows: auto auto auto auto;
   grid-row-gap: 1em;
   grid-column-gap: 0.5em;
   justify-content: center;
+  align-items: center;
   /* justify-items: start; */
   text-align: center
 }
@@ -71,15 +76,21 @@ export default {
   margin-right: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center
+  justify-items: center
 }
 
+h2{
+  margin-top: 1.5em;
+  margin-bottom: 0.5em
+}
 .show {
 align-self: center;
 display: block;
 width: 70px;
 background-color: #008CBA;
 padding: 0.3em 0.8em;
+margin: 1em;
+font-size: 0.7em;
 border-radius: 8px;
 color: bisque;
 cursor: pointer;
@@ -111,6 +122,7 @@ transition-duration: 0.4s;
   width: 30%;
   position: relative;
   transition: all 5s ease-in-out;
+  font-size: 1.5em
 }
 
 .popup h2 {
@@ -163,4 +175,22 @@ padding-right: 1em
   .popup img{
   width: 80%;
 }}
+@media screen and (max-width: 425px){
+  h2 {
+    font-size: medium
+  }
+  .popup{
+    font-size: 1em
+  }
+  #allCharacters {
+    font-size: 0.8em;
+    grid-row-gap: 0.5m;
+    grid-column-gap: 0
+  }
+
+.show{
+  /* font-size: 0.5em; */
+  width: 40px
+}
+}
 </style>

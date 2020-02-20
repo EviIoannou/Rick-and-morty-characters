@@ -35,7 +35,8 @@ body{
 #nav a {
   font-weight: bold;
   color: rgb(70, 158, 190);
-  text-decoration: none
+  text-decoration: none;
+  font-size: larger
 }
 
 #nav a.router-link-exact-active {
@@ -47,8 +48,8 @@ h2 {
 }
 
 @media screen and (max-width: 425px){
-  #app {
-   font-size: smaller
+  #nav {
+   font-size: small
   }
 }
 </style>

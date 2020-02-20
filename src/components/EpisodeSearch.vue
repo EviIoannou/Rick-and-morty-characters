@@ -41,3 +41,18 @@ export default {
   name: 'EpisodeSearch'
 }
 </script>
+
+<style scoped>
+select {
+  font-size: large
+}
+
+@media screen and (max-width: 425px){
+  h2 {
+    font-size: medium
+  }
+  select {
+font-size: small
+  }
+}
+</style>

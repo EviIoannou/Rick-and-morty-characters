@@ -25,15 +25,15 @@
         <p>
           In this Character-verse, you can search for characters that appeared in different episodes. <br>
           Just choose the episode and you will see which characters played.
-          Episodes available are up to season 2, episode 9.
-        </p>
-        <router-link to="/search/episode">Search in episodes...</router-link>
+          Episodes available are up to season 2, episode 9. <br>
+          <router-link to="/search/episode">Search in episodes...</router-link>
+          </p>
         <p>
           You can also look into which characters were last seen in which location.  <br>
           Just choose the location and you will see which characters were last seen there.
-          There are 20 locations to choose from.
+          There are 20 locations to choose from. <br>
+          <router-link to="/search/location">Search in locations...</router-link>
         </p>
-        <router-link to="/search/location">Search in locations...</router-link>
       </div>
     </div>
     <footer>Data is retrieved by <a href="https://rickandmortyapi.com/" id='source'>https://rickandmortyapi.com/</a></footer>
@@ -72,10 +72,11 @@ img{
   display: grid;
   grid-template-columns: auto auto;
   border-top: solid #24325FFF 0.1em;
-  padding: 1em;
+  padding: 1.5em;
   text-align: start;
   width: 100%;
   align-self: center;
+  background-color: rgb(228, 239, 245);
   color:#24325FFF
 }
 
@@ -120,15 +121,32 @@ footer {
   margin: 0;
   background-color: #24325FFF;
   color: rgba(170, 201, 216);
-  font-size: small
+  font-size: smaller
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
   .intro {
 grid-template-columns: auto
   }
   .intro div {
     width: 70%
   }
+    main #welcome{
+    font-size: 0.9em;
+    padding-right: 1em;
+    padding-left: 1em
+  }
+}
+
+@media screen and (max-width: 425px){
+h1, h2, h3 {
+    font-size: medium
+  }
+footer {
+  font-size: small
+}
+p{
+  font-size: smaller
+}
 }
 </style>
