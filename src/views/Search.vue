@@ -3,13 +3,13 @@
     <EpisodeSearch
       v-if="$route.params.filter==='episode'"
       @get-characters='loadCharacters'
-      title='Episode'
+      title='Search by episode'
       msg='Select episode'
     />
     <LocationSearch
       v-if="$route.params.filter==='location'"
       @get-characters='loadCharacters'
-      title='Location'
+      title='Search by location'
       msg='Select location'
     />
     <CharacterInfo></CharacterInfo>
