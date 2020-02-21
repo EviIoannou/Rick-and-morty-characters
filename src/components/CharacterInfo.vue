@@ -8,7 +8,7 @@
         :value="myCharacter.id"
       >
         {{myCharacter.name}}
-        <input type="button" value="Info" class='show' :id="myCharacter.id" @click="getId" />
+        <input type="button" value="Info" class='show' :id="myCharacter.id" @click="getId(myCharacter.id)" />
       </p>
     </section>
 
@@ -33,14 +33,14 @@
 <script>
 export default {
   methods: {
-    getId (e) {
-      console.log(e.target.id)
-      fetch(`https://rickandmortyapi.com/api/character/${e.target.id}`)
+    getId (target) {
+      console.log(target)
+      fetch(`https://rickandmortyapi.com/api/character/${target}`)
         .then(response => response.json())
         .then(result => {
           this.$store.state.myInfo = result
           console.log(this.$store.state.myInfo)
-          this.$store.state.imageSource = `https://rickandmortyapi.com/api/character/avatar/${e.target.id}.jpeg`
+          this.$store.state.imageSource = `https://rickandmortyapi.com/api/character/avatar/${target}.jpeg`
         })
     },
     closeOverlay () {
