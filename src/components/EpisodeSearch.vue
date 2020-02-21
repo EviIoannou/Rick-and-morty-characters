@@ -24,6 +24,7 @@ export default {
   },
   created () {
     this.$store.commit('setCharacters', [])
+    this.$store.commit('setEpisode', null)
     fetch('https://rickandmortyapi.com/api/episode/')
       .then(response => response.json())
       .then(result => {

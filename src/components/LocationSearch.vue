@@ -23,6 +23,7 @@ export default {
   },
   created () {
     this.$store.commit('setCharacters', [])
+    this.$store.commit('setLocation', null)
     fetch('https://rickandmortyapi.com/api/location/')
       .then(response => response.json())
       .then(result => {
