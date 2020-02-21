@@ -8,6 +8,8 @@ export default new Vuex.Store({
     episodes: null,
     locations: null,
     myCharacters: [],
+    chosenEp: null,
+    chosenLoc: null,
     id: null,
     imageSource: null,
     myInfo: null
@@ -16,6 +18,12 @@ export default new Vuex.Store({
   mutations: {
     setCharacters (state, value) {
       state.myCharacters = value
+    },
+    setEpisode (state, value) {
+      state.chosenEp = value
+    },
+    setLocation (state, value) {
+      state.chosenLoc = value
     }
   }
 })

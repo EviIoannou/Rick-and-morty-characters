@@ -7,8 +7,10 @@
         v-for='(episode,e) in $store.state.episodes'
         :key='`${e}-${episode.id}`'
         :value='episode.id'
+        :id='episode.name'
       >{{episode.episode}}</option>
     </select>
+    <h2 v-if="$store.state.chosenEp !== null">Episode "{{$store.state.chosenEp}}"</h2>
   </div>
 </template>
 <script>
@@ -16,7 +18,8 @@
 export default {
   data () {
     return {
-      choice: null
+      choice: null,
+      chosenEp: null
     }
   },
   created () {
@@ -31,6 +34,9 @@ export default {
 
   watch: {
     choice (val) {
+      this.chosenEp = this.$store.state.episodes.filter(episode => episode.id === val)
+      console.log(val)
+      this.$store.commit('setEpisode', this.chosenEp[0].name)
       this.$emit('get-characters', val)
     }
   },

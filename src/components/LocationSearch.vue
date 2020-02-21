@@ -9,6 +9,7 @@
         :value='location.id'
       >{{location.name}}</option>
     </select>
+    <h2 v-if="$store.state.chosenLoc !== null">Location: {{$store.state.chosenLoc}}</h2>
     </div>
 </template>
 <script>
@@ -16,7 +17,8 @@
 export default {
   data () {
     return {
-      choice: null
+      choice: null,
+      chosenLoc: null
     }
   },
   created () {
@@ -30,6 +32,9 @@ export default {
   },
   watch: {
     choice (val) {
+      this.chosenLoc = this.$store.state.locations.filter(location => location.id === val)
+      console.log(val)
+      this.$store.commit('setLocation', this.chosenLoc[0].name)
       this.$emit('get-characters', val)
     }
   },
