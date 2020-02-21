@@ -8,7 +8,7 @@
         :value="myCharacter.id"
       >
         {{myCharacter.name}}
-        <input type="button" value="Info" class='show' :id="myCharacter.id" @click="getId(myCharacter.id)" />
+        <input type="button" value="Info" class='show' @click="getId(myCharacter.id)" />
       </p>
     </section>
 
